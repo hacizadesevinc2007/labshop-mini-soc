@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0EA5B7"/></marker>
+  </defs>
+  <rect width="960" height="560" fill="#ffffff"/>
+  <rect x="16" y="16" width="928" height="528" rx="14" fill="#F3F5F9" stroke="#14213D" stroke-width="2"/>
+  <text x="36" y="46" font-size="17" font-weight="700" fill="#14213D">Dell laptop (32 GB RAM, 1 TB) — VMware Workstation</text>
+  <!-- internet -->
+  <rect x="770" y="34" width="150" height="44" rx="22" fill="#fff" stroke="#9AA3B2" stroke-dasharray="5 4"/>
+  <text x="845" y="61" font-size="14" text-anchor="middle" fill="#5B6475">Internet</text>
+  <!-- siem-host -->
+  <rect x="40" y="90" width="430" height="300" rx="12" fill="#14213D"/>
+  <text x="60" y="120" font-size="18" font-weight="700" fill="#fff">siem-host  ·  10.10.10.10</text>
+  <text x="60" y="142" font-size="13" fill="#C9D3E6">Ubuntu Server · 16 GB RAM · 6 vCPU · 256 GB · Docker</text>
+  <g font-size="14" fill="#fff" text-anchor="middle">
+    <rect x="60" y="160" width="120" height="86" rx="8" fill="#1D2D52" stroke="#5EE0EE"/>
+    <text x="120" y="196" font-weight="700">Manager</text><text x="120" y="216" font-size="11" fill="#C9D3E6">decode + rules</text><text x="120" y="232" font-size="11" fill="#C9D3E6">1514 / 1515 / 55000</text>
+    <rect x="195" y="160" width="120" height="86" rx="8" fill="#1D2D52" stroke="#5EE0EE"/>
+    <text x="255" y="196" font-weight="700">Indexer</text><text x="255" y="216" font-size="11" fill="#C9D3E6">stores alerts</text><text x="255" y="232" font-size="11" fill="#C9D3E6">9200</text>
+    <rect x="330" y="160" width="120" height="86" rx="8" fill="#1D2D52" stroke="#5EE0EE"/>
+    <text x="390" y="196" font-weight="700">Dashboard</text><text x="390" y="216" font-size="11" fill="#C9D3E6">web console</text><text x="390" y="232" font-size="11" fill="#C9D3E6">443 (HTTPS)</text>
+  </g>
+  <path d="M180 203 H193" stroke="#5EE0EE" stroke-width="2" marker-end="url(#a)"/>
+  <path d="M315 203 H328" stroke="#5EE0EE" stroke-width="2" marker-end="url(#a)"/>
+  <text x="60" y="276" font-size="13" fill="#C9D3E6">Wazuh 4.14.7 single-node (Docker Compose)</text>
+  <text x="60" y="300" font-size="13" fill="#C9D3E6">Adapters: VMnet2 (lab, host-only) + VMnet8 (NAT)</text>
+  <text x="60" y="324" font-size="13" fill="#C9D3E6">vm.max_map_count = 262144 (persistent)</text>
+  <text x="60" y="348" font-size="13" fill="#C9D3E6">Snapshots: w1-clean-install, w1-done</text>
+  <!-- NAT link -->
+  <path d="M470 120 C 640 110, 720 70, 768 58" stroke="#9AA3B2" stroke-width="2" stroke-dasharray="6 4" fill="none" marker-end="url(#a)"/>
+  <text x="600" y="132" font-size="12" fill="#5B6475">NAT (VMnet8) — images &amp; updates</text>
+  <!-- endpoints -->
+  <rect x="580" y="140" width="345" height="120" rx="12" fill="#fff" stroke="#0EA5B7" stroke-width="2"/>
+  <text x="598" y="170" font-size="17" font-weight="700" fill="#14213D">ubuntu-web  ·  10.10.10.50</text>
+  <text x="598" y="192" font-size="13" fill="#5B6475">Ubuntu Server · 2 GB · 2 vCPU · 40 GB</text>
+  <text x="598" y="214" font-size="13" fill="#5B6475">Wazuh agent 001 · Apache2 · SSH</text>
+  <rect x="828" y="226" width="86" height="22" rx="11" fill="#0EA5B7"/><text x="871" y="241" font-size="11" fill="#fff" text-anchor="middle">agent 1</text>
+  <rect x="580" y="290" width="345" height="120" rx="12" fill="#fff" stroke="#0EA5B7" stroke-width="2"/>
+  <text x="598" y="320" font-size="17" font-weight="700" fill="#14213D">win-client  ·  10.10.10.80</text>
+  <text x="598" y="342" font-size="13" fill="#5B6475">Windows 10 · 4 GB · 2 vCPU · 80 GB</text>
+  <text x="598" y="364" font-size="13" fill="#5B6475">Wazuh agent 002 · Sysmon (SwiftOnSecurity)</text>
+  <rect x="828" y="376" width="86" height="22" rx="11" fill="#0EA5B7"/><text x="871" y="391" font-size="11" fill="#fff" text-anchor="middle">agent 2</text>
+  <!-- event arrows -->
+  <path d="M578 200 C 540 200, 520 200, 472 200" stroke="#0EA5B7" stroke-width="2.5" fill="none" marker-end="url(#a)"/>
+  <path d="M578 350 C 530 350, 520 260, 472 240" stroke="#0EA5B7" stroke-width="2.5" fill="none" marker-end="url(#a)"/>
+  <text x="488" y="190" font-size="12" fill="#0E7C8A">events :1514</text>
+  <text x="500" y="330" font-size="12" fill="#0E7C8A">events :1514</text>
+  <!-- lab network bar -->
+  <rect x="40" y="440" width="880" height="40" rx="8" fill="#E8F7F9" stroke="#0EA5B7"/>
+  <text x="480" y="466" font-size="15" font-weight="700" fill="#0E7C8A" text-anchor="middle">Host-only lab network VMnet2 · 10.10.10.0/24 · Dell host adapter 10.10.10.1 (no routing)</text>
+  <path d="M255 390 V438" stroke="#0EA5B7" stroke-width="2"/><path d="M760 410 V438" stroke="#0EA5B7" stroke-width="2"/><path d="M640 260 V285" stroke="#ffffff" stroke-width="0"/>
+  <text x="40" y="520" font-size="13" fill="#5B6475">Dell browser → https://10.10.10.10 (dashboard) · http://10.10.10.50 (Apache). Endpoints had NAT only during setup; removed afterwards.</text>
+</svg>
